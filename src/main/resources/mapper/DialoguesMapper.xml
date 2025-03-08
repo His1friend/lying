@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.tjnutt.lying.mapper.DialoguesMapper">
+
+    <resultMap id="BaseResultMap" type="org.tjnutt.lying.entity.Dialogues">
+            <id property="dialogueId" column="dialogue_id" jdbcType="VARCHAR"/>
+            <result property="caseId" column="case_id" jdbcType="VARCHAR"/>
+            <result property="characterId" column="character_id" jdbcType="VARCHAR"/>
+            <result property="content" column="content" jdbcType="VARCHAR"/>
+            <result property="sequence" column="sequence" jdbcType="INTEGER"/>
+            <result property="mediaUrl" column="media_url" jdbcType="VARCHAR"/>
+            <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+            <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        dialogue_id,case_id,character_id,
+        content,sequence,media_url,
+        created_at,updated_at
+    </sql>
+</mapper>

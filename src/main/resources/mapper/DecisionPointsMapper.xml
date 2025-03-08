@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.tjnutt.lying.mapper.DecisionPointsMapper">
+
+    <resultMap id="BaseResultMap" type="org.tjnutt.lying.entity.DecisionPoints">
+            <id property="decisionId" column="decision_id" jdbcType="VARCHAR"/>
+            <result property="caseId" column="case_id" jdbcType="VARCHAR"/>
+            <result property="afterDialogueId" column="after_dialogue_id" jdbcType="VARCHAR"/>
+            <result property="title" column="title" jdbcType="VARCHAR"/>
+            <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+            <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        decision_id,case_id,after_dialogue_id,
+        title,created_at,updated_at
+    </sql>
+</mapper>

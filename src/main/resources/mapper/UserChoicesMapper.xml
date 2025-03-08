@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.tjnutt.lying.mapper.UserChoicesMapper">
+
+    <resultMap id="BaseResultMap" type="org.tjnutt.lying.entity.UserChoices">
+            <id property="choiceId" column="choice_id" jdbcType="VARCHAR"/>
+            <result property="recordId" column="record_id" jdbcType="VARCHAR"/>
+            <result property="decisionId" column="decision_id" jdbcType="VARCHAR"/>
+            <result property="optionId" column="option_id" jdbcType="VARCHAR"/>
+            <result property="chosenAt" column="chosen_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        choice_id,record_id,decision_id,
+        option_id,chosen_at
+    </sql>
+</mapper>

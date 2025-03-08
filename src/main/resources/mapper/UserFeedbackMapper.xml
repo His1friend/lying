@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.tjnutt.lying.mapper.UserFeedbackMapper">
+
+    <resultMap id="BaseResultMap" type="org.tjnutt.lying.entity.UserFeedback">
+            <id property="feedbackId" column="feedback_id" jdbcType="VARCHAR"/>
+            <result property="userId" column="user_id" jdbcType="VARCHAR"/>
+            <result property="caseId" column="case_id" jdbcType="VARCHAR"/>
+            <result property="rating" column="rating" jdbcType="INTEGER"/>
+            <result property="comment" column="comment" jdbcType="VARCHAR"/>
+            <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        feedback_id,user_id,case_id,
+        rating,comment,created_at
+    </sql>
+</mapper>

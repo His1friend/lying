@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.tjnutt.lying.mapper.DecisionOptionsMapper">
+
+    <resultMap id="BaseResultMap" type="org.tjnutt.lying.entity.DecisionOptions">
+            <id property="optionId" column="option_id" jdbcType="VARCHAR"/>
+            <result property="decisionId" column="decision_id" jdbcType="VARCHAR"/>
+            <result property="content" column="content" jdbcType="VARCHAR"/>
+            <result property="leadsTo" column="leads_to" jdbcType="VARCHAR"/>
+            <result property="isCorrect" column="is_correct" jdbcType="TINYINT"/>
+            <result property="explanation" column="explanation" jdbcType="VARCHAR"/>
+            <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+            <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        option_id,decision_id,content,
+        leads_to,is_correct,explanation,
+        created_at,updated_at
+    </sql>
+</mapper>
